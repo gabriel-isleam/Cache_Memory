@@ -1,31 +1,27 @@
 # Cache_Memory_simulator
 
 
+Cache memory simulator
+
 	The program simulates a cache memory, which have less memory than the main memory, so when it reaches the maximum 
-capacity, one of the existing elements will have to be replaced with the new element. Program implements three different 
-methods to decide which element to replace: LRU (least recently used), FIFO (first in first out), LFU (least frequently used).
+capacity, one of the existing elements will have to be replaced with the new element. Program implements three different methods to decide which element to replace: LRU (least recently used), FIFO (first in first out), LFU (least frequently used).
 
 
 	-- Least recently used (LRU) - the least used element will be replace with the new element.
 
-	-- First in first out (FIFO) - the element at the beginning of the queue will be removed, so the new element will 
-be introduced at the end of the queue.
+	-- First in first out (FIFO) - the element at the beginning of the queue will be removed, so the new element will be introduced at the end of the queue.
 
-	-- Least frequently used (LFU) - the element with the lowest number of accesses will be removed; if there are multiple 
-object with the same number of accesses, first added element will be removed.
+	-- Least frequently used (LFU) - the element with the lowest number of accesses will be removed; if there are multiple object with the same number of accesses, first added element will be removed.
 
 
 	There is also a main memory represented as an array which will contain all objects added.
 
-	Object types: Free, Basic (inherits Free class), Premium (inherits  Basic class). Every subscription should contain
-the allowed number of Premium and Basic requests. Free requests are unlimited.
+	Object types: Free, Basic (inherits Free class), Premium (inherits  Basic class). Every subscription should contain the allowed number of Premium and Basic requests. Free requests are unlimited.
 
 
 	Working with memory operations:
 
-	-> "ADD object_name basic_requests premium_requests" - every time you add a new item, it will be added only in the 
-main memory and not in the cache memory; if the item is already in the main memory or in cache also, it will be overwritten 
-in the main memory and removed from cache;
+	-> "ADD object_name basic_requests premium_requests" - every time you add a new item, it will be added only in the main memory and not in the cache memory; if the item is already in the main memory or in cache also, it will be overwritten in the main memory and removed from cache;
 
 		* parameter basic_requests is mandatory and premium_requests is optional
 
